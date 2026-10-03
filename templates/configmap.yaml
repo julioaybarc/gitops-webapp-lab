@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-webapp-html
+data:
+  index.html: |
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Webapp Chart</title>
+        <style>
+            body { font-family: Arial, sans-serif; background: #1e293b; color: #f1f5f9; text-align: center; padding-top: 80px; }
+        </style>
+    </head>
+    <body>
+        <h1>{{ .Values.message }}</h1>
+        <p>Imagen: {{ .Values.image.repository }}:{{ .Values.image.tag }}</p>
+        <p>Réplicas: {{ .Values.replicaCount }}</p>
+    </body>
+    </html>

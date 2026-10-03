@@ -1,0 +1,12 @@
+replicaCount: 2
+
+image:
+  repository: nginx
+  tag: "1.25-alpine"
+  pullPolicy: IfNotPresent
+
+service:
+  type: NodePort
+  port: 80
+
+message: "Hola desde mi Helm Chart - v1"
