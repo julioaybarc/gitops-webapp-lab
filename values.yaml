@@ -1,4 +1,4 @@
-replicaCount: 3
+replicaCount: 2
 
 image:
   repository: nginx
@@ -9,4 +9,4 @@ service:
   type: NodePort
   port: 80
 
-message: "Hola desde mi Helm Chart - v2"
+message: "Hola desde mi Helm Chart - v1"
